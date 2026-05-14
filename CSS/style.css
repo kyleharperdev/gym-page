@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Poppins', Arial;
+    height: 100vh;
+    min-width: 100%;
+}
+
+/* Nav */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 10%;
+    border: 2px solid red;
+    background-color: black;
+}
+
+.company-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.company-name h5 {
+    margin: 0;
+}
+
+.company-name p {
+    margin: 0;
+}
+
+.nav-items {
+    display: flex;
+    gap: 14px;
+}
+
+.nav-buttons {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-us {
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav-buttons:hover {
+    transform: translateY(0.5px);
+    transition: 0.2s ease-in;
+}
+
+.nav-buttons:active {
+    transform: translateY(-0.5px);
+}
+
+.contact-us:hover {
+    transform: translateY(0.5px);
+    transition: 0.2s ease-in;
+}
+
+.contact-us:active {
+    transform: translateY(-0.5px);
+}
+
