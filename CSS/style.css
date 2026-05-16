@@ -216,82 +216,91 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Program Section */
+
+.program-section {
+    width: 90%;
+    max-width: 1600px;
+    height: 700px;
+
+    margin: 0 auto;
+}
+
+.program-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+
+    width: 100%;
+    max-width: 1600px;
+}
+
+.program-grids {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+}
+
+.program-card {
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+}
+
+.yoga {
+    background-image: url(../Images/GRID4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.strength {
+    background-image: url(../Images/GRID1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardio {
+    background-image: url(../Images/GRID2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.boxing {
+    background-image: url(../Images/GRID3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Pricing Section */
+
+
     
 
 
 /* Media Query */
-
-@media (max-width: 1028px) {
-    body {
-        margin-left: 175px;
-        align-items: center;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        transition: width 0.3s ease-in-out;
-
-        height: 100vh;
-        width: 100px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        padding: 20px;
-
-        backdrop-filter: blur(3px);
-    }
-
-    .nav-items {
-        flex-direction: column;
-        gap: 60px;
-        padding-top: 100px;
-        text-align: left;
-    }
-
-    .company-name {
-        margin-top: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-buttons {
-        margin-top: 10px;
-        font-size: 0.8rem;
-    }
-
-    .contact-us {
-        font-size: 0.7rem
-    }
-}
-
-@media (max-width: 430px) {
-    body {
-        margin-left: 80px;
-    }
-    .navbar {
-        width: 80px;    
-    }
-
-    .company-name {
-        font-size: 12px;
-    }
-
-    .nav-buttons {
-        font-size: 10px;
-    }
-
-    .contact-us {
-        font-size: 10px;
-        padding: 10px;
-    }
-}
