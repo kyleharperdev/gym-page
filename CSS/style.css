@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +12,6 @@
 
 body {
     font-family: 'Poppins', Arial;
-    height: 100vh;
     min-width: 100%;
     background-color: rgb(22, 20, 20);
 }
@@ -24,6 +27,12 @@ body {
     position: relative;
     backdrop-filter: blur(0.5px);
     background-color: rgb(23, 21, 21);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(23, 21, 21, 0.95);
+    backdrop-filter: blur(8px);
 }
 
 .company-name {
@@ -60,6 +69,7 @@ body {
     letter-spacing: 0.5px;
     text-shadow: 0px 1px 3px black ;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .contact-us {
@@ -260,7 +270,6 @@ body {
     text-align: center;
 
     gap: 10px;
-    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-size: cover;
 }
@@ -316,7 +325,7 @@ body {
     margin: 20px;
     gap: 20px;
     font-size: 1rem;
-    padding: 10px;
+    padding: 20px 20px 40px 20px;
 }
 
 .pricing-card i {
@@ -327,6 +336,11 @@ body {
     font-size: 2.2rem;
     color: red;
     font-weight: bold;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+
+    align-self: stretch;
 }
 
 .pricing-card h3 {
@@ -357,8 +371,6 @@ body {
     align-items: center;
 }
 
-
-
 .pricing-grids {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -368,7 +380,26 @@ body {
     height: 500px;
     margin: 20px auto;
 }
-    
 
+.about-us-section,
+.program-section,
+.pricing-section,
+.join-us-section {
+    scroll-margin-top: 100px;
+}
+    
+/* Animations */
+
+.program-card {
+    opacity: 0;
+    transform: translateY(50px);
+
+    transition: all 0.6s ease;
+}
+
+.program-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Media Query */
