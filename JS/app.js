@@ -1,49 +1,41 @@
 const cards = document.querySelectorAll(".hidden");
 
-const sections = document.querySelectorAll(
-    ".join-us-section, .about-us-section, .program-section, .pricing-section"
-);
-const navLinks = document.querySelectorAll(".nav-link");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-
+const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
-
-            observer.unobserve(entry.target);
         }
-
     });
 }, {
     threshold: 0.2
-})
-
-cards.forEach((card) => {
-    observer.observe(card);
 });
 
-window.addEventListener("scroll", () => {
+cards.forEach(card => animationObserver.observe(card));
 
-    let top = window.scrollY;
+const sections = document.querySelectorAll(
+    ".join-us-section, .about-us-section, .program-section, .pricing-section, .reviews-section"
+);
 
-    sections.forEach((section) => {
+const navLinks = document.querySelectorAll(".nav-link");
 
-        let offset = section.offsetTop - 230;
-        let height = section.offsetHeight;
-        let id = section.getAttribute("id");
+const navObserver = new IntersectionObserver((entries) => {
 
-        if (top >= offset && top < offset + height) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
 
-            navLinks.forEach((link) => {
-                link.classList.remove("active-link");
-            });
+        const id = entry.target.id;
 
-            document
-                .querySelector(`.nav-link[href="#${id}"]`)
-                .classList.add("active-link");
+        navLinks.forEach(link => link.classList.remove("active-link"));
+
+        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+        if (activeLink) {
+            activeLink.classList.add("active-link");
         }
-
     });
 
+}, {
+    threshold: 0.6
 });
+
+sections.forEach(section => navObserver.observe(section));

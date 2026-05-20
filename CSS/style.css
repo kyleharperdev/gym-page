@@ -387,6 +387,42 @@ body {
     scroll-margin-top: 100px;
 }
     
+/* Reviews Section */
+
+.reviews-section {
+    width: 90%;
+    max-width: 1600px;
+    height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+.review-image {
+    width: 50%;
+    height: 100%;
+
+    background-image: url(../Images/REVIEW1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.star-wrapper {
+    display: flex;
+    color: red;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+.fa-quote-left {
+    font-size: 3rem;
+}
+
+
 /* Animations */
 
 .hidden {
