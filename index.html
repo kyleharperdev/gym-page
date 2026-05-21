@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <div class="company-name">
-            <i class="fa-solid fa-dumbbell" style="font-size: 2rem;"></i>
+            <i class="fa-solid fa-dumbbell company-icon"></i>
         </div>
         <div class="nav-items">
             <a href="#home" class="nav-buttons nav-link">HOME</a>
@@ -19,10 +19,10 @@
             <a href="#pricing" class="nav-buttons nav-link">PRICING</a>
             <a href="#reviews" class="nav-buttons nav-link">REVIEWS</a>
         </div>
-            <div class="nav-actions">
-                <button class="nav-buttons">LOGIN</button>
-                <button class="contact-us">CONTACT US</button>
-            </div>
+        <div class="nav-actions">
+            <button class="nav-buttons">LOGIN</button>
+            <button class="contact-us">CONTACT US</button>
+        </div>
     </div>
 
     <div class="page-sections">
@@ -30,11 +30,11 @@
             <div class="message-wrapper">
                 <div class="ju-message">
                     <p><strong>PUSH HARDER TODAY</strong></p>
-                    <p style="color: red;"><strong>IF YOU WANT A</strong></p>
-                    <p style="color: red;"><strong>DIFFERENT TOMORROW</strong></p>
-                    <p style="font-size: 10px;">Join now to improve your health, gain muscle, lose fat and get into the best shape of your life.</p>
+                    <p class="text-red"><strong>IF YOU WANT A</strong></p>
+                    <p class="text-red"><strong>DIFFERENT TOMORROW</strong></p>
+                    <p class="ju-subtext">Join now to improve your health, gain muscle, lose fat and get into the best shape of your life.</p>
                 </div>
-                <button class="contact-us" style="border-radius: 12px; margin-top: 12px;">JOIN NOW!</button>
+                <button class="contact-us join-btn">JOIN NOW!</button>
             </div>
         </div>
 
@@ -58,43 +58,39 @@
 
         <div class="about-us-section hidden" id="about">
             <div class="about-content">
-                <h2 style="color: red;">ABOUT US</h2>
-                <h1 style="font-size: 35px;">WELCOME TO IRON PEAK FITNESS</h1>
-                <h3 style="color: red;">Get the body you want at the gym you love.</h3>
+                <h2 class="section-label">ABOUT US</h2>
+                <h1 class="section-title">WELCOME TO IRON PEAK FITNESS</h1>
+                <h3 class="text-red">Get the body you want at the gym you love.</h3>
                 <p>At Iron Peak Fitness, we help people build strength, confidence, and healthier lifestyles through expert coaching, modern equipment, and supportive training programs.</p>
-                <li>Professional personal trainers</li>
-                <li>Modern strength and cardio equipment</li>
-                <li>Beginner-friendly workout programs</li>
-                <li>Flexible membership plans</li>
-                <li>Supportive fitness community</li>
+                <ul>
+                    <li>Professional personal trainers</li>
+                    <li>Modern strength and cardio equipment</li>
+                    <li>Beginner-friendly workout programs</li>
+                    <li>Flexible membership plans</li>
+                    <li>Supportive fitness community</li>
+                </ul>
             </div>
-            <div class="about-image">  
-            </div>
+            <div class="about-image"></div>
         </div>
 
         <div class="program-section hidden" id="programs">
             <div class="program-text">
-                <h2 style="color: red;">OUR CLASS</h2>
+                <h2 class="section-label">OUR CLASS</h2>
                 <h1>CHOOSE A PROGRAM</h1>
             </div>
-
-            <div class="program-grids ">
-
+            <div class="program-grids">
                 <div class="program-card strength hidden">
                     <h3>STRENGTH TRAINING</h3>
                     <button class="contact-us">JOIN CLASS</button>
                 </div>
-
                 <div class="program-card cardio hidden">
                     <h3>CARDIO TREADMILL</h3>
                     <button class="contact-us">JOIN CLASS</button>
                 </div>
-
                 <div class="program-card boxing hidden">
                     <h3>BOXING</h3>
                     <button class="contact-us">JOIN CLASS</button>
                 </div>
-
                 <div class="program-card yoga hidden">
                     <h3>YOGA & FLEXIBILITY</h3>
                     <button class="contact-us">JOIN CLASS</button>
@@ -104,45 +100,54 @@
 
         <div class="pricing-section hidden" id="pricing">
             <div class="program-text">
-                <h2 style="color: red;">OUR PRICING</h2>
+                <h2 class="section-label">OUR PRICING</h2>
                 <h1>CHOOSE YOUR PLAN</h1>
             </div>
-
-                <div class="pricing-grids">
-
-                <div class="pricing-card hidden" style="border: 2px solid white;">
+            <div class="pricing-grids">
+                <div class="pricing-card pricing-card--standard hidden">
                     <h3>PERSONAL</h3>
                     <i class="fa-solid fa-utensils"></i>
                     <p>$49.99</p>
-                <li>Professional personal trainers</li>
-                <li>Modern strength and cardio equipment</li>
-                <li>Beginner-friendly workout programs</li>
-                <li>Flexible membership plans</li>
+                    <ul>
+                        <li> Access to all gym equipment</li>
+                        <li> 2 group classes per week</li>
+                        <li> Basic fitness assessment on joining</li>
+                        <li> Access to member mobile app</li>
+                        <li> Locker room & shower access</li>
+                    </ul>
                     <div class="btn-wrapper">
                         <button class="contact-us pricing">GET STARTED</button>
                     </div>
                 </div>
-
-                <div class="pricing-card hidden"style="border: 2px solid red;">
+                <div class="pricing-card pricing-card--featured hidden">
                     <h3>ENTERPRISE</h3>
                     <i class="fa-solid fa-stopwatch"></i>
                     <p>$69.99</p>
-                <li>Professional personal trainers</li>
-                <li>Modern strength and cardio equipment</li>
-                <li>Beginner-friendly workout programs</li>
-                <li>Flexible membership plans</li>
+                    <ul>
+                        <li> Unlimited group classes</li>
+                        <li> 1 personal training session per month</li>
+                        <li> Quarterly fitness progress reviews</li>
+                        <li> Nutrition guidance resources</li>
+                        <li> Priority class booking</li>
+                        <li> Locker room & shower access</li>
+                    </ul>
                     <div class="btn-wrapper">
                         <button class="contact-us pricing">GET STARTED</button>
                     </div>
                 </div>
-                <div class="pricing-card hidden" style="border: 2px solid white;">
+                <div class="pricing-card pricing-card--standard hidden">
                     <h3>PROFESSIONAL</h3>
                     <i class="fa-solid fa-money-bill"></i>
                     <p>$129.99</p>
-                <li>Professional personal trainers</li>
-                <li>Modern strength and cardio equipment</li>
-                <li>Beginner-friendly workout programs</li>
-                <li>Flexible membership plans</li>
+                    <ul>
+                        <li> Unlimited group classes</li>
+                        <li> 4 personal training sessions per month</li>
+                        <li> Monthly body composition analysis</li>
+                        <li> Custom nutrition & meal plan</li>
+                        <li> 24/7 gym access</li>
+                        <li> Dedicated locker</li>
+                        <li> Direct coach messaging</li>
+                    </ul>
                     <div class="btn-wrapper">
                         <button class="contact-us pricing">GET STARTED</button>
                     </div>
@@ -150,16 +155,20 @@
             </div>
         </div>
 
-            <div class="reviews-section hidden" id="reviews">
-                <div class="about-content">
-                    <h2 style="color: red;">OUR TESTIMONIALS</h2>
-                    <h1 style="font-size: 35px;">WHAT THEY SAY</h1>
-                    <i class="fa-solid fa-quote-left" style="color: red;"></i>
-                    <h3>James Carter</h3>
-                        <p>
-                            Iron Peak completely changed my fitness journey. The trainers are supportive,
-                            the equipment is top quality, and the atmosphere keeps me motivated every day.
-                        </p>
+        <div class="reviews-section hidden" id="reviews">
+
+            <div class="review-title">
+                    <h2 class="section-label">OUR TESTIMONIALS</h2>
+                    <h1 class="section-title">WHAT THEY SAY</h1>
+                </div>
+
+            <div class="review-content">
+                <div class="review">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <h3>Priya Sharma</h3>
+                    <p>
+                        As someone who was completely new to the gym, I was nervous about joining. The coaches at Iron Peak made me feel welcome from day one and helped me build a routine that actually fits my life. Six months in and I'm stronger than I've ever been.
+                    </p>
                     <div class="star-wrapper">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -168,12 +177,78 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
-                    <div class="review-image">  
+
+                <div class="review">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <h3>Marcus Webb</h3>
+                    <p>
+                        I've tried a few gyms over the years but Iron Peak is something else. The equipment is always clean and well-maintained, the staff actually know your name, and the atmosphere pushes you to show up even on the days you don't feel like it. Best decision I've made for my health.
+                    </p>
+                    <div class="star-wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
                 </div>
             </div>
         </div>
 
-    
+        <div class="footer">
+            <div class="footer-info">
+                <div class="footer-branding">
+                    <div class="footer-title">
+                        <i class="fa-solid fa-dumbbell dumbell"></i>
+                        <h1>IRON PEAK</h1>
+                    </div>
+                        <p class="text-white">Iron Peak Fitness is a results-driven gym built for people who are serious about change. Whether you're just starting out or pushing your limits, we provide the coaching, equipment, and community to help you reach your peak.</p>
+                    <div class="footer-location-number">
+                        <div class="location">
+                           <i class="fa-solid fa-location-dot"></i> 
+                           <p>Iron Peak Fitness, 14 Forge Street, Wolverhampton, WV1 3DT</p>
+                        </div>
+
+                        <div class="number">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>01902 554 371</p>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="footer-branding">
+                        <div class="footer-title font-size">
+                            <h1>QUICK LINKS</h1>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-branding">
+                        <div class="footer-title font-size">
+                            <h1>USEFUL LINKS</h1>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Membership Agreement</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-socials">
+                        <p class="text-white">© 2025 Iron Peak Fitness. All rights reserved.</p>
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
 
     <script src="JS/app.js"></script>
 </body>

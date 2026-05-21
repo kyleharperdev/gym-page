@@ -16,6 +16,25 @@ body {
     background-color: rgb(22, 20, 20);
 }
 
+/* Utilities */
+
+.text-red {
+    color: red;
+}
+
+.text-white {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.section-label {
+    color: red;
+}
+
+.section-title {
+    font-size: 35px;
+}
+
 /* Nav */
 .navbar {
     display: flex;
@@ -24,13 +43,9 @@ body {
     padding: 20px;
     height: 10%;
     width: 100%;
-    position: relative;
-    backdrop-filter: blur(0.5px);
-    background-color: rgb(23, 21, 21);
     position: sticky;
     top: 0;
     z-index: 1000;
-
     background-color: rgba(23, 21, 21, 0.95);
     backdrop-filter: blur(8px);
 }
@@ -42,6 +57,7 @@ body {
     color: white;
     padding-left: 10px;
 }
+
 .company-name h5 {
     margin: 0;
 }
@@ -50,10 +66,14 @@ body {
     margin: 0;
 }
 
+.company-icon {
+    font-size: 2rem;
+    color: white;
+}
+
 .nav-items {
     display: flex;
     gap: 14px;
-
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -74,13 +94,13 @@ body {
 .contact-us {
     border: none;
     padding: 12px;
-    margin-right: 5px; 
+    margin-right: 5px;
     background-color: red;
     color: white;
     text-align: center;
     cursor: pointer;
     font-size: 1rem;
-    text-shadow: 0px 1px 3px black ;
+    text-shadow: 0px 1px 3px black;
 }
 
 .nav-buttons:hover {
@@ -107,88 +127,91 @@ body {
     align-items: center;
 }
 
-/* Join us Section */
+/* Join Us Section */
 
-    .page-sections {
-        display: flex;
-        min-width: 100%;
-        flex-direction: column;
-        gap: 80px;
-        padding: 40px 0;
-    }
+.page-sections {
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    gap: 80px;
+    padding: 40px 0;
+    padding-bottom: 0;
+}
 
-    .join-us-section {
-        height: 75vh;
+.join-us-section {
+    height: 75vh;
+    background-image: url(../Images/JoinUsBG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
-        background-image: url(../Images/JoinUsBG.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+.ju-message {
+    color: white;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2rem;
+    text-shadow: 0px 1px 3px black;
+}
 
-        padding: 30px;
+.ju-subtext {
+    font-size: 10px;
+}
 
-        width: 90%;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
+.message-wrapper {
+    min-width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 70px;
+}
 
-    .ju-message {
-        color: white;
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        font-size: 2rem;
-        text-shadow: 0px 1px 3px black ;
-    }
+.join-btn {
+    border-radius: 12px;
+    margin-top: 12px;
+}
 
-    .message-wrapper {
-        min-width: 25%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        margin-left: 70px;
-    }
+/* Details Section */
 
-    /* Details Section */
+.details-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    width: 90%;
+    height: 300px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
-    .details-section {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+.training-text, .equipment-text, .health-text {
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
 
-        padding: 30px;
+.training-text i, .equipment-text i, .health-text i {
+    font-size: 50px;
+    color: red;
+}
 
-        width: 90%;
-        height: 300px;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-
-    .training-text, .equipment-text, .health-text {
-        padding: 10px;
-        color: white;
-        text-align: center;
-    }
-
-    .training-text i, .equipment-text i, .health-text i {
-        font-size: 50px;
-        color: red;
-    }
-
-    /* About Us Section */
+/* About Us Section */
 
 .about-us-section {
     width: 90%;
     max-width: 1600px;
     height: 600px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin: 0 auto;
 }
 
@@ -205,9 +228,13 @@ body {
     letter-spacing: 1px;
 }
 
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
 .about-content li {
     margin: 15px 0 0 15px;
-    list-style: none;
 }
 
 .about-content li::before {
@@ -219,7 +246,6 @@ body {
 .about-image {
     width: 50%;
     height: 100%;
-
     background-image: url(../Images/BG1.jpg);
     background-size: cover;
     background-position: center;
@@ -232,7 +258,6 @@ body {
     width: 90%;
     max-width: 1600px;
     height: 700px;
-
     margin: 0 auto;
 }
 
@@ -243,7 +268,6 @@ body {
     flex-direction: column;
     padding: 20px;
     color: white;
-
     width: 100%;
     max-width: 1600px;
 }
@@ -252,7 +276,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-
     width: 90%;
     height: 500px;
     margin: 20px auto;
@@ -261,16 +284,16 @@ body {
 .program-card {
     color: white;
     padding: 20px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     gap: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-size: cover;
+    border: 5px solid rgb(35, 32, 32);
+    border-radius: 4px;
 }
 
 .yoga {
@@ -311,7 +334,6 @@ body {
     width: 90%;
     max-width: 1600px;
     height: 700px;
-
     margin: 0 auto;
 }
 
@@ -327,6 +349,19 @@ body {
     padding: 20px 20px 40px 20px;
 }
 
+.pricing-card--standard {
+    border: 2px solid white;
+}
+
+.pricing-card--featured {
+    border: 2px solid red;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
 .pricing-card i {
     font-size: 2rem;
 }
@@ -335,10 +370,8 @@ body {
     font-size: 2.2rem;
     color: red;
     font-weight: bold;
-
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(255, 0, 0, 0.4);
-
     align-self: stretch;
 }
 
@@ -374,7 +407,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
     width: 90%;
     height: 500px;
     margin: 20px auto;
@@ -383,52 +415,169 @@ body {
 .about-us-section,
 .program-section,
 .pricing-section,
-.join-us-section {
+.join-us-section,
+.reviews-section {
     scroll-margin-top: 100px;
 }
-    
+
 /* Reviews Section */
 
 .reviews-section {
     width: 90%;
     max-width: 1600px;
-    height: 600px;
-
+    min-height: 600px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
     margin: 0 auto;
 }
 
-.review-image {
-    width: 50%;
-    height: 100%;
+.review-content {
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    color: white;
 
-    background-image: url(../Images/REVIEW1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: rgb(35, 32, 32); 
+}
+
+.review-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    color: white;
 }
 
 .star-wrapper {
     display: flex;
     color: red;
     gap: 10px;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
-.fa-quote-left {
+.quote-icon {
     font-size: 3rem;
+    color: red;
 }
 
+/* Footer */
+
+.footer {
+    width: 100%;
+    min-height: 350px;
+
+    background-color: rgb(35, 32, 32); 
+}
+
+.footer-info {
+    min-height: 350px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.footer-branding {
+    height: 270px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-title {
+  display: flex;
+  gap: 14px;
+  color: white;
+  align-items: center;
+  height: 50px;
+  width: 40%;
+  font-size: 0.8rem;
+}
+
+.footer-location-number {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fa-location-dot, .fa-phone {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.location, .number {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: white;
+}
+
+.dumbell {
+    font-size: 2rem;
+    color: red;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: red;
+}
+
+.font-size {
+    font-size: 0.6rem;
+}
+
+.footer-socials {
+    grid-column: 1 / -1;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 30px 0 30px;
+    text-align: center;
+}
+
+.footer-socials p {
+    opacity: 0.9;
+}
 
 /* Animations */
 
 .hidden {
     opacity: 0;
     transform: translateY(50px);
-
     transition: all 0.6s ease;
 }
 
