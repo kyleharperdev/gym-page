@@ -39,3 +39,25 @@ const navObserver = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => navObserver.observe(section));
+
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+});
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+                document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        } else {
+            mobileMenu.classList.remove('open');
+        }
+    });
+});
