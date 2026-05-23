@@ -1,10 +1,6 @@
-🧠 ONE reusable “Checkout System”
-
-Everything feeds into the same system:
-
-Flow:
-User selects:
-program OR pricing plan OR join now option
-Then you store it as a selected product
-Then they go to:
-/checkout page 
+- [ ] CONTACT US (navbar) → `contact.html`
+- [ ] JOIN NOW → `checkout.html?plan=personal`
+- [ ] GET STARTED buttons → `checkout.html?plan=X`
+- [ ] JOIN CLASS buttons → `checkout.html?plan=class`
+- [ ] LOGIN → login modal
+- [ ] Footer links → correct pages or modals

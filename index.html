@@ -247,11 +247,11 @@
                             <h1>USEFUL LINKS</h1>
                         </div>
                         <ul class="footer-links">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Membership Agreement</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="javascript:void(0)" onclick="openModal('privacy')">Privacy Policy</a></li>
+                            <li><a href="javascript:void(0)" onclick="openModal('terms')">Terms & Conditions</a></li>
+                            <li><a href="javascript:void(0)" onclick="openModal('faq')">FAQs</a></li>
+                            <li><a href="javascript:void(0)" onclick="openModal('membership')">Membership Agreement</a></li>
+                            <li><a href="javascript:void(0)">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-socials">
@@ -262,6 +262,18 @@
 
 
     </div>
+
+        <div class="modal-overlay" id="modal">
+            <div class="modal-box">
+                <button class="modal-close" id="modal-close">✕</button>
+                <h2 id="modal-title"></h2>
+                <div id="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+
+
 
     <script src="JS/app.js"></script>
 </body>
