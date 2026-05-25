@@ -1,6 +1,0 @@
-- [ ] CONTACT US (navbar) → `contact.html`
-- [ ] JOIN NOW → `checkout.html?plan=personal`
-- [ ] GET STARTED buttons → `checkout.html?plan=X`
-- [ ] JOIN CLASS buttons → `checkout.html?plan=class`
-- [ ] LOGIN → login modal
-- [ ] Footer links → correct pages or modals
