@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Peak Contact Page</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="navbar nopad">
+    <div class="company-name">
+        <i class="fa-solid fa-dumbbell company-icon"></i>
+    </div>
+    <div class="nav-items">
+    </div>
+    <div class="nav-actions">
+        <button class="nav-buttons">LOGIN</button>
+        <button class="contact-us nav-contact-btn" id="home-btn">HOME</button>
+        <button class="hamburger" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</div>
+
+    <div class="form-container-wrapper">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Contact Us</h1>
+                <p>Get in touch and ask us anything.</p>
+            </div>
+
+            <div class="form-grid">
+
+            <div class="form-contents">
+                <input type="text" placeholder="Your name...">
+                <input type="email" placeholder="Email address">
+            </div>
+
+             <div class="form-contents">
+                <input type="tel" placeholder="Phone number">
+                <input type="text" placeholder="Subject">
+            </div>
+
+            <div class="form-contents">
+                <textarea placeholder="Your message..." rows="6"></textarea>
+            </div>
+
+            <div class="form-contents">
+                <button class="contact-us" id="submit-btn" type="submit">SEND MESSAGE</button>
+            </div>
+
+            </div>
+        </div> 
+    </div>
+
+            <div class="modal-overlay" id="modal">
+            <div class="modal-box">
+                <button class="modal-close" id="modal-close">✕</button>
+                <h2 id="modal-title">Thank you!</h2>
+                <div id="modal-body">
+                <p>Thank you for reaching out!
+                We've received your message and will get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="/JS/contact.js"></script>
+</body>
+</html>
