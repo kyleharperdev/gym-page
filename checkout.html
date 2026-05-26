@@ -16,9 +16,8 @@
     </div>
     <div class="nav-items"></div>
     <div class="nav-actions">
-        <button class="nav-buttons">LOGIN</button>
         <a href="index.html" class="contact-us" id="nav-homebtn">HOME</a>
-        <button class="hamburger" aria-label="Open menu">
+        <button class="hamburger nopad" aria-label="Open menu">
             <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
     </div>
@@ -35,13 +34,30 @@
     </div>
 
     <form class="order-summary hidden-step" id="step-payment" novalidate>
-        <h2>PAYMENT DETAILS</h2>
+    <h2>PAYMENT DETAILS</h2>
+
+    <div class="form-group">
+        <label for="card-name">Cardholder name</label>
         <input type="text" id="card-name" name="cardName" placeholder="Cardholder name" autocomplete="cc-name">
-        <input type="tel" id="card-number" name="cardNumber" placeholder="Card number" maxlength="16" autocomplete="cc-number">
+    </div>
+
+    <div class="form-group">
+        <label for="card-number">Card number</label>
+        <input type="tel" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16" autocomplete="cc-number">
+    </div>
+
+    <div class="form-group">
+        <label for="card-expiry">Expiry date</label>
         <input type="text" id="card-expiry" name="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp">
-        <input type="tel" id="card-cvv" name="cardCvv" placeholder="CVV" maxlength="3" autocomplete="cc-csc">
-        <button class="contact-us" id="pay-btn" type="submit">PAY NOW</button>
-    </form>
+    </div>
+
+    <div class="form-group">
+        <label for="card-cvv">CVV</label>
+        <input type="tel" id="card-cvv" name="cardCvv" placeholder="123" maxlength="3" autocomplete="cc-csc">
+    </div>
+
+    <button class="contact-us" id="pay-btn" type="submit">PAY NOW</button>
+</form>
 
     <div class="order-summary hidden-step" id="step-success">
         <i class="fa-solid fa-circle-check step-success-icon" aria-hidden="true"></i>
