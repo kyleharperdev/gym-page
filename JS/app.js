@@ -1,4 +1,6 @@
-const cards = document.querySelectorAll(".hidden");
+// ─── Scroll-in animations ────────────────────────────────────────────────────
+
+const animatedElements = document.querySelectorAll(".hidden");
 
 const animationObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -10,7 +12,9 @@ const animationObserver = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 
-cards.forEach(card => animationObserver.observe(card));
+animatedElements.forEach(el => animationObserver.observe(el));
+
+// ─── Active nav link highlight ────────────────────────────────────────────────
 
 const sections = document.querySelectorAll(
     ".join-us-section, .about-us-section, .program-section, .pricing-section, .reviews-section"
@@ -19,26 +23,24 @@ const sections = document.querySelectorAll(
 const navLinks = document.querySelectorAll(".nav-link");
 
 const navObserver = new IntersectionObserver((entries) => {
-
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
 
         const id = entry.target.id;
-
         navLinks.forEach(link => link.classList.remove("active-link"));
 
         const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-
         if (activeLink) {
             activeLink.classList.add("active-link");
         }
     });
-
 }, {
     threshold: 0.6
 });
 
 sections.forEach(section => navObserver.observe(section));
+
+// ─── Hamburger / mobile menu ──────────────────────────────────────────────────
 
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -61,6 +63,8 @@ document.querySelectorAll('.mobile-link').forEach(link => {
         }
     });
 });
+
+// ─── Modals ───────────────────────────────────────────────────────────────────
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
@@ -142,7 +146,7 @@ const modalContent = {
             <p>This agreement is governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
         `
     }
-}
+};
 
 function openModal(type) {
     modalTitle.textContent = modalContent[type].title;
@@ -150,13 +154,19 @@ function openModal(type) {
     modal.classList.add('open');
 }
 
-modalClose.addEventListener("click", () => modal.classList.remove('open'));
+function closeModal() {
+    modal.classList.remove('open');
+}
+
+modalClose.addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.classList.remove('open');
+    if (e.target === modal) closeModal();
+});
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
 });
 
-const contactBtn = document.querySelector(".nav-contact-btn");
-
-contactBtn.addEventListener("click", () => {
-    window.location.href = "contact.html";
-})
+// Wire up footer modal buttons via data-modal attribute (no inline onclick needed)
+document.querySelectorAll('[data-modal]').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.modal));
+});

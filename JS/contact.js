@@ -1,34 +1,39 @@
-const homeBtn = document.getElementById("home-btn");
-
-homeBtn.addEventListener("click", () => {
-    window.location.href = "index.html";
-})
-
+const form = document.getElementById("contact-form");
 const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modal-title");
 const modalClose = document.getElementById("modal-close");
-const modalBody = document.getElementById("modal-body");
-const submitBtn = document.getElementById("submit-btn");
 
-submitBtn.addEventListener("click", () => {
-    const inputs = document.querySelectorAll('.form-contents input, .form-contents textarea');
-    let allFilled = true;
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const inputs = form.querySelectorAll("input, textarea");
+    let isValid = true;
 
     inputs.forEach(input => {
-        if (input.value.trim() === '') {
-            allFilled = false;
-            input.style.borderColor = 'red';
-        } else {
-            input.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+        // Clear previous error state
+        input.classList.remove("input-error");
+
+        if (input.value.trim() === "") {
+            isValid = false;
+            input.classList.add("input-error");
+        } else if (input.type === "email" && !input.value.includes("@")) {
+            isValid = false;
+            input.classList.add("input-error");
         }
     });
 
-    if (allFilled) {
-        modal.classList.add('open');
+    if (isValid) {
+        modal.classList.add("open");
     }
 });
 
-modalClose.addEventListener("click", () => modal.classList.remove('open'));
+function closeModal() {
+    modal.classList.remove("open");
+}
+
+modalClose.addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.classList.remove('open');
+    if (e.target === modal) closeModal();
+});
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
 });

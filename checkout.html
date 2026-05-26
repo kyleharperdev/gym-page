@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <meta name="description" content="Iron Peak Fitness — complete your membership purchase securely.">
+    <title>Checkout — Iron Peak</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
-    
-    <div class="navbar nopad">
+
+<nav class="navbar nopad">
     <div class="company-name">
-        <i class="fa-solid fa-dumbbell company-icon"></i>
+        <i class="fa-solid fa-dumbbell company-icon" aria-hidden="true"></i>
     </div>
-    <div class="nav-items">
-    </div>
+    <div class="nav-items"></div>
     <div class="nav-actions">
         <button class="nav-buttons">LOGIN</button>
-        <button class="contact-us" id="nav-homebtn">HOME</button>
+        <a href="index.html" class="contact-us" id="nav-homebtn">HOME</a>
         <button class="hamburger" aria-label="Open menu">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
     </div>
-</div>
+</nav>
 
-<div class="order-wrapper">
+<main class="order-wrapper">
 
     <div class="order-summary" id="step-summary">
         <h1>ORDER SUMMARY</h1>
@@ -35,22 +34,24 @@
         <button class="contact-us" id="proceed-btn">PROCEED TO PAYMENT</button>
     </div>
 
-    <div class="order-summary hidden-step" id="step-payment">
+    <form class="order-summary hidden-step" id="step-payment" novalidate>
         <h2>PAYMENT DETAILS</h2>
-        <input type="text" placeholder="Cardholder name">
-        <input type="text" placeholder="Card number" maxlength="16">
-        <input type="text" placeholder="MM/YY" maxlength="5">
-        <input type="text" placeholder="CVV" maxlength="3">
-        <button class="contact-us" id="pay-btn">PAY NOW</button>
-    </div>
+        <input type="text" id="card-name" name="cardName" placeholder="Cardholder name" autocomplete="cc-name">
+        <input type="tel" id="card-number" name="cardNumber" placeholder="Card number" maxlength="16" autocomplete="cc-number">
+        <input type="text" id="card-expiry" name="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp">
+        <input type="tel" id="card-cvv" name="cardCvv" placeholder="CVV" maxlength="3" autocomplete="cc-csc">
+        <button class="contact-us" id="pay-btn" type="submit">PAY NOW</button>
+    </form>
 
     <div class="order-summary hidden-step" id="step-success">
-        <i class="fa-solid fa-circle-check step-success-icon"></i>
+        <i class="fa-solid fa-circle-check step-success-icon" aria-hidden="true"></i>
         <h2>PAYMENT SUCCESSFUL</h2>
         <p>Welcome to Iron Peak. Your membership is now active. Check your email for confirmation.</p>
-        <button class="contact-us" id="home-btn">BACK TO HOME</button>
+        <a href="index.html" class="contact-us" id="home-btn">BACK TO HOME</a>
     </div>
-</div>
-    <script src="/JS/checkout.js"></script>
+
+</main>
+
+<script src="JS/checkout.js"></script>
 </body>
 </html>
