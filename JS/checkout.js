@@ -1,4 +1,4 @@
-// ─── Populate order summary from URL params ───────────────────────────────────
+// Populate order summary from URL params 
 
 const params = new URLSearchParams(window.location.search);
 const plan = params.get('plan');
@@ -16,14 +16,14 @@ document.getElementById("plan-name").textContent = selected.name;
 document.getElementById("plan-price").textContent = selected.price;
 document.getElementById("plan-billing").textContent = selected.billing;
 
-// ─── Step 1 → Step 2 ──────────────────────────────────────────────────────────
+// Step 1 -> Step 2 
 
 document.getElementById("proceed-btn").addEventListener("click", () => {
     document.getElementById("step-summary").classList.add("hidden-step");
     document.getElementById("step-payment").classList.remove("hidden-step");
 });
 
-// ─── Step 2 → Step 3 (with basic payment validation) ─────────────────────────
+// Step 2 -> Step 3 (with basic payment validation) 
 
 const paymentForm = document.getElementById("step-payment");
 

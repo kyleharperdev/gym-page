@@ -1,8 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-/* =====================
-   CSS Custom Properties
-   ===================== */
+/* CSS Custom Properties */
 
 :root {
     --color-primary: #e63333;
@@ -26,10 +24,7 @@ body {
     background-color: var(--bg-body);
 }
 
-/* =========
-   Utilities
-   ========= */
-
+/* UTILITIES */
 .text-red {
     color: var(--color-primary);
 }
@@ -47,9 +42,7 @@ body {
     font-size: 35px;
 }
 
-/* ===
-   Nav
-   === */
+/* NAV */
 
 .navbar {
     display: flex;
@@ -144,9 +137,7 @@ body {
     align-items: center;
 }
 
-/* ================
-   Join Us Section
-   ================ */
+/* JOIN US SECTION */
 
 .page-sections {
     display: flex;
@@ -202,9 +193,7 @@ body {
     margin-top: 12px;
 }
 
-/* ================
-   Details Section
-   ================ */
+/* DETAILS SECTION */
 
 .details-section {
     display: flex;
@@ -234,9 +223,7 @@ body {
     margin: 10px 0;
 }
 
-/* =================
-   About Us Section
-   ================= */
+/* ABOUT US SECTION */
 
 .about-us-section {
     width: 90%;
@@ -285,9 +272,7 @@ body {
     object-position: center;
 }
 
-/* ================
-   Program Section
-   ================ */
+/* PROGRAM SECTION */
 
 .program-section {
     width: 90%;
@@ -366,9 +351,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* ================
-   Pricing Section
-   ================ */
+/* PRICING SECTION */
 
 .pricing-section {
     width: 90%;
@@ -460,9 +443,7 @@ body {
     scroll-margin-top: 100px;
 }
 
-/* ================
-   Reviews Section
-   ================ */
+/* REVIEWS SECTION */
 
 .reviews-section {
     width: 90%;
@@ -519,9 +500,7 @@ body {
     color: var(--color-primary);
 }
 
-/* ======
-   Footer
-   ====== */
+/* FOOTER */
 
 .footer {
     width: 100%;
@@ -649,9 +628,7 @@ body {
     opacity: 0.9;
 }
 
-/* ==========
-   Animations
-   ========== */
+/* ANIMATIONS */
 
 .hidden {
     opacity: 0;
@@ -669,9 +646,7 @@ body {
     color: var(--color-primary);
 }
 
-/* =========
-   Hamburger
-   ========= */
+/* HAMBURGER */
 
 .hamburger {
     display: none;
@@ -719,9 +694,7 @@ body {
         url(../Images/JoinUsBG.jpg);
 }
 
-/* ======
-   Modals
-   ====== */
+/* MODALS */
 
 .modal-overlay {
     display: none;
@@ -784,9 +757,7 @@ body {
     background-color: rgb(237, 231, 231);
 }
 
-/* =================
-   Contact Us Page
-   ================= */
+/* CONTACT US PAGE */
 
 .form-container-wrapper {
     display: flex;
@@ -886,9 +857,7 @@ body {
     padding-bottom: 0px;
 }
 
-/* ===============
-   Checkout Page
-   =============== */
+/* CHECKOUT PAGE */
 
 .order-wrapper {
     display: flex;
@@ -999,9 +968,7 @@ body {
     display: none;
 }
 
-/* =============
-   Media Queries
-   ============= */
+/* MQ */
 
 @media (max-width: 1100px) {
 

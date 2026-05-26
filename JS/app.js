@@ -1,4 +1,4 @@
-// ─── Scroll-in animations ────────────────────────────────────────────────────
+// Scroll-in animations 
 
 const animatedElements = document.querySelectorAll(".hidden");
 
@@ -14,7 +14,7 @@ const animationObserver = new IntersectionObserver((entries) => {
 
 animatedElements.forEach(el => animationObserver.observe(el));
 
-// ─── Active nav link highlight ────────────────────────────────────────────────
+// Active nav link highlight 
 
 const sections = document.querySelectorAll(
     ".join-us-section, .about-us-section, .program-section, .pricing-section, .reviews-section"
@@ -40,7 +40,7 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(section => navObserver.observe(section));
 
-// ─── Hamburger / mobile menu ──────────────────────────────────────────────────
+//Hamburger / mobile menu 
 
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -64,7 +64,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
     });
 });
 
-// ─── Modals ───────────────────────────────────────────────────────────────────
+// Modals 
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
@@ -166,7 +166,7 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
 });
 
-// Wire up footer modal buttons via data-modal attribute (no inline onclick needed)
+// Wire up footer modal buttons 
 document.querySelectorAll('[data-modal]').forEach(btn => {
     btn.addEventListener('click', () => openModal(btn.dataset.modal));
 });
