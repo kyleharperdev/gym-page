@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="navbar nopad">
+    <div class="company-name">
+        <i class="fa-solid fa-dumbbell company-icon"></i>
+    </div>
+    <div class="nav-items">
+    </div>
+    <div class="nav-actions">
+        <button class="nav-buttons">LOGIN</button>
+        <button class="contact-us" id="nav-homebtn">HOME</button>
+        <button class="hamburger" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</div>
+
+<div class="order-wrapper">
+
+    <div class="order-summary" id="step-summary">
+        <h1>ORDER SUMMARY</h1>
+        <p id="plan-name"></p>
+        <p id="plan-price"></p>
+        <p id="plan-billing"></p>
+        <button class="contact-us" id="proceed-btn">PROCEED TO PAYMENT</button>
+    </div>
+
+    <div class="order-summary hidden-step" id="step-payment">
+        <h2>PAYMENT DETAILS</h2>
+        <input type="text" placeholder="Cardholder name">
+        <input type="text" placeholder="Card number" maxlength="16">
+        <input type="text" placeholder="MM/YY" maxlength="5">
+        <input type="text" placeholder="CVV" maxlength="3">
+        <button class="contact-us" id="pay-btn">PAY NOW</button>
+    </div>
+
+    <div class="order-summary hidden-step" id="step-success">
+        <i class="fa-solid fa-circle-check step-success-icon"></i>
+        <h2>PAYMENT SUCCESSFUL</h2>
+        <p>Welcome to Iron Peak. Your membership is now active. Check your email for confirmation.</p>
+        <button class="contact-us" id="home-btn">BACK TO HOME</button>
+    </div>
+</div>
+    <script src="/JS/checkout.js"></script>
+</body>
+</html>
