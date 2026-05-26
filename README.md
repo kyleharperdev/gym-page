@@ -113,7 +113,7 @@ Iron-Peak/
 
 ## Author
 
-Built by a self-taught frontend developer — 2.5 months into learning HTML, CSS and JavaScript.
+Built by a self-taught frontend developer — 3 months into learning HTML, CSS and JavaScript.
 
 ---
 
