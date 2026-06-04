@@ -23,6 +23,7 @@ form.addEventListener("submit", (e) => {
 
     if (isValid) {
         modal.classList.add("open");
+        form.reset();
     }
 });
 
