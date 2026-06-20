@@ -10,7 +10,7 @@ A fully responsive, multi-page gym website built with HTML, CSS and Vanilla Java
 
 ## Live Demo
 
-> (https://asklfxue.github.io/gym-page/)
+> (https://kyleharperdev.github.io/gym-page/)
 
 ---
 
