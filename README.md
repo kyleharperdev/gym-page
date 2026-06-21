@@ -1,6 +1,6 @@
 # Iron Peak Fitness
 
-A fully responsive, multi-page gym website built with HTML, CSS and Vanilla JavaScript. Developed as a portfolio project to demonstrate frontend development skills including responsive design, DOM manipulation, accessibility, and multi-page navigation.
+A fully responsive, multi-page gym website built with HTML, CSS and vanilla JavaScript. It was my first proper portfolio project, and I used it to get hands-on with responsive layouts, DOM manipulation, accessibility, and multi-page navigation.
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -10,7 +10,7 @@ A fully responsive, multi-page gym website built with HTML, CSS and Vanilla Java
 
 ## Live Demo
 
-> (https://kyleharperdev.github.io/gym-page/)
+[View the live site](https://kyleharperdev.github.io/gym-page/)
 
 ---
 
@@ -111,9 +111,9 @@ Iron-Peak/
 
 ---
 
-## Author
+## About
 
-Built by a self-taught frontend developer — 3 months into learning HTML, CSS and JavaScript.
+Built by me — a self-taught frontend developer, around three months into learning HTML, CSS and JavaScript. I wrote the project throughout and used AI only for a final review and polish pass at the end.
 
 ---
 
